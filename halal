@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript BOM Példa</title>
+</head>
+<body>
+    <h1>JavaScript BOM Példa</h1>
+
+    <p>Kattints az alábbi gombokra a BOM példák futtatásához:</p>
+
+    <button onclick="showAlert()">Példa 1: Alert</button>
+    <button onclick="showLocation()">Példa 2: Aktuális URL</button>
+    <button onclick="showNavigator()">Példa 3: Böngésző információ</button>
+    <button onclick="showScreen()">Példa 4: Képernyő információ</button>
+    <button onclick="goBack()">Példa 5: Visszalépés</button>
+
+    <p id="output"></p>
+
+    <script>
+        function showAlert() {
+            alert("Üdvözöljük a weboldalon!");
+        }
+
+        function showLocation() {
+            var output = document.getElementById("output");
+            output.innerHTML = "Az aktuális URL: " + window.location.href;
+        }
+
+        function showNavigator() {
+            var output = document.getElementById("output");
+            output.innerHTML = "Böngésző neve: " + window.navigator.appName;
+        }
+
+        function showScreen() {
+            var output = document.getElementById("output");
+            output.innerHTML = "Képernyő szélessége: " + window.screen.width + " pixel";
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
